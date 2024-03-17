@@ -1,5 +1,5 @@
 #!/bin/bash
-
+# source set_env.sh .env
 # Default to ".env" if no argument is provided
 ENV_FILE=${1:-".env"}
 
