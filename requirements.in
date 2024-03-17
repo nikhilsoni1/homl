@@ -1,2 +1,8 @@
 black
 jupyter
+psycopg2-binary
+alembic
+matplotlib
+scikit-learn
+pandas
+numpy
