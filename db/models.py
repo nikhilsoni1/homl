@@ -7,9 +7,13 @@ metadata = Base.metadata
 
 
 class CaHousingDatum(Base):
-    __tablename__ = 'ca_housing_data'
+    __tablename__ = "ca_housing_data"
 
-    row_id = Column(Integer, primary_key=True, server_default=text("nextval('ca_housing_data_row_id_seq'::regclass)"))
+    row_id = Column(
+        Integer,
+        primary_key=True,
+        server_default=text("nextval('ca_housing_data_row_id_seq'::regclass)"),
+    )
     longitude = Column(Float(53))
     latitude = Column(Float(53))
     housing_median_age = Column(Float(53))

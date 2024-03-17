@@ -1,5 +1,6 @@
 from sqlalchemy.orm import Session
 from sqlalchemy import and_
+
 # import models
 from sqlalchemy.exc import IntegrityError
 from typing import List
@@ -20,16 +21,10 @@ def write_record(db, model, data, message=None):
     return flag
 
 
-# def get_user_record_by_email(db, email_id):
-#     q = db.query(models.User).filter(models.User.email_id == email_id)
-#     r = q.all()
-#     r_len = len(r)
-#     if r_len == 1:
-#         return r[0]
-#     elif r_len > 1:
-#         return f"Multiple records found for {email_id}!"
-#     elif r_len == 0:
-#         return None
+def get_model_all_record(db, model):
+    q = db.query(model)
+    r = q.all()
+    return r
 
 
 # def update_user_record_token_by_email(db, record, token, token_update_ts):
