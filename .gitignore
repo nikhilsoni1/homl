@@ -3,3 +3,5 @@ __pycache__/
 .env
 scratch.ipynb
 scratch.py
+datasets/
+db_bkp/

@@ -6,4 +6,7 @@ matplotlib
 scikit-learn
 pandas
 numpy
-sqlacodegen
+sqlacodegen==2.3.0.post1
+python-dotenv
+tqdm
+pip-tools

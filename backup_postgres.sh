@@ -3,10 +3,10 @@
 # Define variables
 CONTAINER_NAME="dump-postgres-container"
 DB_USER="postgres"
-DB_NAME="dev01"
-BACKUP_FILE="/tmp/dev01_$(date +%Y%m%d_%H%M)_bkp.sql" # Add HH:MM to the file name
-DESTINATION_DIR="store"
-mkdir -p store
+DB_NAME="homl"
+BACKUP_FILE="/tmp/homl_$(date +%Y%m%d_%H%M)_bkp.sql" # Add HH:MM to the file name
+DESTINATION_DIR="db_bkp"
+mkdir -p db_bkp
 
 # Create a database dump inside the Docker container
 docker exec -t "$CONTAINER_NAME" pg_dump -U "$DB_USER" -d "$DB_NAME" -f "$BACKUP_FILE"
